@@ -1,0 +1,3 @@
+[submodule "PhoneCountryCodePicker/Phone-Country-Code-and-Flags"]
+	path = PhoneCountryCodePicker/Phone-Country-Code-and-Flags
+	url = https://github.com/Dwarven/Phone-Country-Code-and-Flags.git

@@ -1,0 +1,18 @@
+//
+//  PCCPViewController.h
+//  PCCPDemo
+//
+//  Created by 杨建亚 on 15/5/15.
+//  Copyright (c) 2015年 Dwarven. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface PCCPViewController : UITableViewController
+
+@property (nonatomic) BOOL isUsingChinese;
+
+- (id)initWithCompletion:(void(^)(id countryDic))completion;
++ (UIImage *)imageForCountryCode:(NSString *)code;
+
+@end
