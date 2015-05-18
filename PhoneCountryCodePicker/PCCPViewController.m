@@ -65,7 +65,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - PCCs data for cn
+#pragma mark - PCCs data for en
 
 - (NSDictionary*)englishSortWithDictionaryArray:(NSArray*)dictionaryArray {
     NSMutableArray * sourceArray = [dictionaryArray mutableCopy];
