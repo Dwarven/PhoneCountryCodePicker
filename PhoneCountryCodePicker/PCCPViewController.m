@@ -38,6 +38,11 @@
     [self.tableView setShowsVerticalScrollIndicator:NO];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentifier"];
     
+    UIView *currentTitleView = [[self navigationItem] titleView];
+    
+    UIActivityIndicatorView *aiview = [[UIActivityIndicatorView alloc]  initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:aiview]];
+    [aiview startAnimating];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
@@ -56,7 +61,12 @@
             return [obj1 compare:obj2 options:NSNumericSearch];
         }];
         dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [aiview stopAnimating];
+            [[self navigationItem] setTitleView:currentTitleView];
+            
             [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:_isUsingChinese?@"取消":@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)]];
+            
             [self.tableView reloadData];
         });
     });
