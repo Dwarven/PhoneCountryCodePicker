@@ -38,23 +38,28 @@
     [self.tableView setShowsVerticalScrollIndicator:NO];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentifier"];
     
-    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:_isUsingChinese?@"取消":@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)]];
     
-    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
-                                                                                               encoding:NSUTF8StringEncoding
-                                                                                                  error:NULL]
-                                                               dataUsingEncoding:NSUTF8StringEncoding]
-                                                      options:kNilOptions
-                                                        error:nil];
-    
-    if (_isUsingChinese) {
-        _PCCs = [self chineseSortWithDictionaryArray:array];
-    }else{
-        _PCCs = [self englishSortWithDictionaryArray:array];
-    }
-    _keys = [[_PCCs allKeys] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        return [obj1 compare:obj2 options:NSNumericSearch];
-    }];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
+                                                                                                   encoding:NSUTF8StringEncoding
+                                                                                                      error:NULL]
+                                                                   dataUsingEncoding:NSUTF8StringEncoding]
+                                                          options:kNilOptions
+                                                            error:nil];
+        
+        if (_isUsingChinese) {
+            _PCCs = [self chineseSortWithDictionaryArray:array];
+        }else{
+            _PCCs = [self englishSortWithDictionaryArray:array];
+        }
+        _keys = [[_PCCs allKeys] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [obj1 compare:obj2 options:NSNumericSearch];
+        }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:_isUsingChinese?@"取消":@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)]];
+            [self.tableView reloadData];
+        });
+    });
 }
 
 - (void)cancel{
