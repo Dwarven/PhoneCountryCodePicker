@@ -21,7 +21,6 @@
 		DFE7F10C1B05A9A8009D9E71 /* flags.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1041B05A9A8009D9E71 /* flags.png */; };
 		DFE7F10D1B05A9A8009D9E71 /* flags@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1051B05A9A8009D9E71 /* flags@2x.png */; };
 		DFE7F10E1B05A9A8009D9E71 /* phone_country_code.json in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1061B05A9A8009D9E71 /* phone_country_code.json */; };
-		DFE7F10F1B05A9A8009D9E71 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DFE7F1071B05A9A8009D9E71 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		DFE7F1041B05A9A8009D9E71 /* flags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flags.png; sourceTree = "<group>"; };
 		DFE7F1051B05A9A8009D9E71 /* flags@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flags@2x.png"; sourceTree = "<group>"; };
 		DFE7F1061B05A9A8009D9E71 /* phone_country_code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phone_country_code.json; sourceTree = "<group>"; };
-		DFE7F1071B05A9A8009D9E71 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +161,6 @@
 				DFE7F1041B05A9A8009D9E71 /* flags.png */,
 				DFE7F1051B05A9A8009D9E71 /* flags@2x.png */,
 				DFE7F1061B05A9A8009D9E71 /* phone_country_code.json */,
-				DFE7F1071B05A9A8009D9E71 /* README.md */,
 			);
 			path = "Phone-Country-Code-and-Flags";
 			sourceTree = "<group>";
@@ -276,7 +273,6 @@
 			files = (
 				DFE7F1081B05A9A8009D9E71 /* PCCPViewController.m in Sources */,
 				DFCBC6291B05909100A4642E /* ViewController.m in Sources */,
-				DFE7F10F1B05A9A8009D9E71 /* README.md in Sources */,
 				DFCBC6261B05909100A4642E /* AppDelegate.m in Sources */,
 				DFCBC6231B05909100A4642E /* main.m in Sources */,
 			);

@@ -25,6 +25,12 @@
     return self;
 }
 
+- (void)dealloc{
+    _PCCs = nil;
+    _keys = nil;
+    _completion = NULL;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -181,7 +187,10 @@
     if (!y) {
         y = @0;
     }
-    return [UIImage imageWithCGImage:CGImageCreateWithImageInRect([[UIImage imageNamed:@"flags"] CGImage], CGRectMake(0, y.integerValue * 2, 32, 32)) scale:2.0 orientation:UIImageOrientationUp];
+    CGImageRef cgImage = CGImageCreateWithImageInRect([[UIImage imageNamed:@"flags"] CGImage], CGRectMake(0, y.integerValue * 2, 32, 32));
+    UIImage * result = [UIImage imageWithCGImage:cgImage scale:2.0 orientation:UIImageOrientationUp];
+    CGImageRelease(cgImage);
+    return result;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
