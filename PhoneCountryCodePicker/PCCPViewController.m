@@ -7,6 +7,8 @@
 //
 
 #import "PCCPViewController.h"
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
 
 @interface PCCPViewController (){
     NSDictionary * _PCCs;
@@ -192,6 +194,11 @@
     return _keys;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    _completion([_PCCs valueForKey:[_keys objectAtIndex:[indexPath section]]][indexPath.row]);
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 + (UIImage *)imageForCountryCode:(NSString *)code{
     NSNumber * y = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"flag_indices" ofType:@"json"]
                                                                                             encoding:NSUTF8StringEncoding
@@ -208,9 +215,35 @@
     return result;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    _completion([_PCCs valueForKey:[_keys objectAtIndex:[indexPath section]]][indexPath.row]);
-    [self dismissViewControllerAnimated:YES completion:NULL];
++ (id)infoFromSimCardAndiOSSettings{
+    
+    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
+                                                                                               encoding:NSUTF8StringEncoding
+                                                                                                  error:NULL]
+                                                               dataUsingEncoding:NSUTF8StringEncoding]
+                                                      options:kNilOptions
+                                                        error:nil];
+    
+    NSString * carrierIsoCountryCode = [[[[[CTTelephonyNetworkInfo alloc] init] subscriberCellularProvider] isoCountryCode] uppercaseString];
+    
+    id(^getCountryDic)(NSString*) = ^(NSString * code){
+        id result = nil;
+        if (code) {
+            for (NSDictionary * dic in array) {
+                if ([dic[@"country_code"] isEqualToString:code]) {
+                    result = dic;
+                    break;
+                }
+            }
+        }
+        return result;
+    };
+    
+    id info = getCountryDic(carrierIsoCountryCode);
+    if (!info) {
+        info = getCountryDic([[[NSLocale currentLocale] objectForKey:NSLocaleCountryCode] uppercaseString]);
+    }
+    return info;
 }
 
 @end
