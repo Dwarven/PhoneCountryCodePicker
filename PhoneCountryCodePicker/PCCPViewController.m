@@ -178,6 +178,7 @@
     }
     if (_PCCs) {
         NSDictionary * countryDic = [_PCCs valueForKey:[_keys objectAtIndex:[indexPath section]]][indexPath.row];
+        [[cell textLabel] setFont:[UIFont systemFontOfSize:15]];
         if (_isUsingChinese) {
             [[cell textLabel] setText:countryDic[@"country_cn"]];
         }else{
