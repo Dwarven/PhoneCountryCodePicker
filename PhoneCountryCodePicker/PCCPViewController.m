@@ -247,4 +247,24 @@
     return info;
 }
 
+
+
++ (id)infoForPhoneCode:(NSInteger)phoneCode{
+    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
+                                                                                               encoding:NSUTF8StringEncoding
+                                                                                                  error:NULL]
+                                                               dataUsingEncoding:NSUTF8StringEncoding]
+                                                      options:kNilOptions
+                                                        error:nil];
+    
+    id result = nil;
+    for (NSDictionary * dic in array) {
+        if (phoneCode == [dic[@"phone_code"] integerValue]) {
+            result = dic;
+            break;
+        }
+    }
+    return result;
+}
+
 @end

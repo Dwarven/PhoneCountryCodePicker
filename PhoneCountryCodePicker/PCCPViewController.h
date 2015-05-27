@@ -15,5 +15,6 @@
 - (id)initWithCompletion:(void(^)(id countryDic))completion;
 + (UIImage *)imageForCountryCode:(NSString *)code;
 + (id)infoFromSimCardAndiOSSettings;
++ (id)infoForPhoneCode:(NSInteger)phoneCode;
 
 @end
