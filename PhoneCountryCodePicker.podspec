@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name                  = 'PhoneCountryCodePicker'
-  s.version               = '0.1.1'
-  s.summary               = 'Array of phone country codes and flags.'
+  s.version               = '0.1.2'
+  s.summary               = 'An iOS tableview picker for PhoneCountryCode.'
   s.homepage              = 'https://github.com/Dwarven/PhoneCountryCodePicker'
   s.ios.deployment_target = '7.0'
   s.license               = { :type => 'MIT', :file => 'LICENSE' }

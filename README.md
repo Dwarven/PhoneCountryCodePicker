@@ -1,5 +1,5 @@
 # PhoneCountryCodePicker
-A iOS tableview picker for PhoneCountryCode
+An iOS tableview picker for PhoneCountryCode
 
 #Preview
 <img src="https://raw.github.com/Dwarven/PhoneCountryCodePicker/master/Screenshots/en.png" width="230" align="center" style="margin:10px">
