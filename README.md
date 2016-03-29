@@ -6,16 +6,15 @@ An iOS tableview picker for PhoneCountryCode
 <img src="https://raw.github.com/Dwarven/PhoneCountryCodePicker/master/Screenshots/cn.png" width="230" align="center" style="margin:10px">
 <img src="https://raw.github.com/Dwarven/PhoneCountryCodePicker/master/Screenshots/result.png" width="230" align="center" style="margin:10px">
 
-#### Podfile
-
+# Podfile
 To integrate PhoneCountryCodePicker into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'PhoneCountryCodePicker'
 ```
 
-How to use 
----
+# How to use 
+
 ```obj-c
 #import "PCCPViewController.h"
 
@@ -30,5 +29,4 @@ PCCPViewController * vc = [[PCCPViewController alloc] initWithCompletion:^(id co
 [vc setIsUsingChinese:YES or NO];
 UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:vc];
 [self presentViewController:naviVC animated:YES completion:NULL];
-
 ```
