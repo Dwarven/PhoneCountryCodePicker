@@ -20,11 +20,16 @@ pod 'PhoneCountryCodePicker'
 
 //first
 NSDictionary * countryDic = [PCCPViewController infoFromSimCardAndiOSSettings];
+//or
+NSDictionary * countryDic = [PCCPViewController infoForPhoneCode:86]; //86 just for China
+
+UIImage * flag = [PCCPViewController imageForCountryCode:countryDic[@"country_code"]];
 NSLog(@"%@", countryDic);
 
 //second
 PCCPViewController * vc = [[PCCPViewController alloc] initWithCompletion:^(id countryDic) {
     NSLog(@"%@", countryDic);
+    UIImage * flag = [PCCPViewController imageForCountryCode:countryDic[@"country_code"]];
 }];
 [vc setIsUsingChinese:YES or NO];
 UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:vc];
