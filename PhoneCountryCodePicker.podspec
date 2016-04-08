@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                  = 'PhoneCountryCodePicker'
-  s.version               = '0.1.3'
+  s.version               = '0.1.4'
   s.summary               = 'An iOS tableview picker for PhoneCountryCode.'
   s.homepage              = 'https://github.com/Dwarven/PhoneCountryCodePicker'
   s.ios.deployment_target = '7.0'
