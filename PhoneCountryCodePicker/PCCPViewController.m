@@ -67,7 +67,7 @@
             [aiview stopAnimating];
             [[self navigationItem] setTitleView:currentTitleView];
             
-            [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:_isUsingChinese?@"取消":@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)]];
+            [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:_leftBarButtonItemTitle?:_isUsingChinese?@"取消":@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)]];
             
             [self.tableView reloadData];
         });
