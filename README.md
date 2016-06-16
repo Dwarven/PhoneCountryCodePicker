@@ -1,8 +1,9 @@
 # PhoneCountryCodePicker
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PhoneCountryCodePicker.svg)](https://img.shields.io/cocoapods/v/PhoneCountryCodePicker.svg)
-[![Platform](https://img.shields.io/cocoapods/p/PhoneCountryCodePicker.svg?style=flat)](http://cocoadocs.org/docsets/PhoneCountryCodePicker)
-[![Twitter](https://img.shields.io/badge/twitter-@DwarvenYang-blue.svg?style=flat)](http://twitter.com/DwarvenYang)
+[![Platform](https://img.shields.io/cocoapods/p/PhoneCountryCodePicker.svg)](http://cocoadocs.org/docsets/PhoneCountryCodePicker)
+[![Twitter](https://img.shields.io/badge/twitter-@DwarvenYang-blue.svg)](http://twitter.com/DwarvenYang)
+[![License](https://img.shields.io/cocoapods/l/PhoneCountryCodePicker.svg)](https://img.shields.io/cocoapods/l/PhoneCountryCodePicker.svg)
 
 An iOS tableview picker for PhoneCountryCode
 
