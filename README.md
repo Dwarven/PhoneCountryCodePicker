@@ -1,5 +1,6 @@
 # PhoneCountryCodePicker
 
+[![Build Status](https://travis-ci.org/Dwarven/PhoneCountryCodePicker.svg)](https://travis-ci.org/Dwarven/PhoneCountryCodePicker)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PhoneCountryCodePicker.svg)](https://img.shields.io/cocoapods/v/PhoneCountryCodePicker.svg)
 [![Platform](https://img.shields.io/cocoapods/p/PhoneCountryCodePicker.svg)](http://cocoadocs.org/docsets/PhoneCountryCodePicker)
 [![Twitter](https://img.shields.io/badge/twitter-@DwarvenYang-blue.svg)](http://twitter.com/DwarvenYang)
