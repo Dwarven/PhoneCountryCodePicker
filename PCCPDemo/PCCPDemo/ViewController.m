@@ -19,9 +19,9 @@
     [super viewDidLoad];
     
     [self updateViewsWithCountryDic:[PCCPViewController infoFromSimCardAndiOSSettings]];
-    NSMutableString * defalultInfo = [[_textField text] mutableCopy];
+    NSMutableString * defalultInfo = [[_label text] mutableCopy];
     [defalultInfo  appendString:@"\n\nAs Default!"];
-    [_textField setText:defalultInfo];
+    [_label setText:defalultInfo];
 }
 
 - (IBAction)pick:(id)sender {
@@ -34,7 +34,7 @@
 }
 
 - (void)updateViewsWithCountryDic:(NSDictionary*)countryDic{
-    [_textField setText:[NSString stringWithFormat:@"country_code: %@\ncountry_en: %@\ncountry_cn: %@\nphone_code: %@",countryDic[@"country_code"],countryDic[@"country_en"],countryDic[@"country_cn"],countryDic[@"phone_code"]]];
+    [_label setText:[NSString stringWithFormat:@"country_code: %@\ncountry_en: %@\ncountry_cn: %@\nphone_code: %@",countryDic[@"country_code"],countryDic[@"country_en"],countryDic[@"country_cn"],countryDic[@"phone_code"]]];
     [_imageView setImage:[PCCPViewController imageForCountryCode:countryDic[@"country_code"]]];
 }
 

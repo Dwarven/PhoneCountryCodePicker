@@ -13,7 +13,6 @@
 		DFCBC62C1B05909100A4642E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCBC62A1B05909100A4642E /* Main.storyboard */; };
 		DFCBC62E1B05909100A4642E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCBC62D1B05909100A4642E /* Images.xcassets */; };
 		DFCBC6311B05909100A4642E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCBC62F1B05909100A4642E /* LaunchScreen.xib */; };
-		DFCBC63D1B05909100A4642E /* PCCPDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCBC63C1B05909100A4642E /* PCCPDemoTests.m */; };
 		DFE7F1081B05A9A8009D9E71 /* PCCPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7F0FF1B05A9A8009D9E71 /* PCCPViewController.m */; };
 		DFE7F1091B05A9A8009D9E71 /* flag_indices.json in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1011B05A9A8009D9E71 /* flag_indices.json */; };
 		DFE7F10A1B05A9A8009D9E71 /* flag_missing.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1021B05A9A8009D9E71 /* flag_missing.png */; };
@@ -22,16 +21,6 @@
 		DFE7F10D1B05A9A8009D9E71 /* flags@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1051B05A9A8009D9E71 /* flags@2x.png */; };
 		DFE7F10E1B05A9A8009D9E71 /* phone_country_code.json in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1061B05A9A8009D9E71 /* phone_country_code.json */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DFCBC6371B05909100A4642E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DFCBC6151B05909100A4642E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DFCBC61C1B05909100A4642E;
-			remoteInfo = PCCPDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DFCBC61D1B05909100A4642E /* PCCPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCCPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,9 +33,6 @@
 		DFCBC62B1B05909100A4642E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFCBC62D1B05909100A4642E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFCBC6301B05909100A4642E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DFCBC6361B05909100A4642E /* PCCPDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCCPDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFCBC63B1B05909100A4642E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFCBC63C1B05909100A4642E /* PCCPDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCCPDemoTests.m; sourceTree = "<group>"; };
 		DFE7F0F11B05A469009D9E71 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DFE7F0F21B05A469009D9E71 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DFE7F0F81B05A581009D9E71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -71,13 +57,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFCBC6331B05909100A4642E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,7 +65,6 @@
 			children = (
 				DFE7F0FD1B05A9A8009D9E71 /* PhoneCountryCodePicker */,
 				DFCBC61F1B05909100A4642E /* PCCPDemo */,
-				DFCBC6391B05909100A4642E /* PCCPDemoTests */,
 				DFCBC61E1B05909100A4642E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				DFCBC61D1B05909100A4642E /* PCCPDemo.app */,
-				DFCBC6361B05909100A4642E /* PCCPDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,23 +97,6 @@
 			children = (
 				DFCBC6211B05909100A4642E /* Info.plist */,
 				DFCBC6221B05909100A4642E /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DFCBC6391B05909100A4642E /* PCCPDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				DFCBC63C1B05909100A4642E /* PCCPDemoTests.m */,
-				DFCBC63A1B05909100A4642E /* Supporting Files */,
-			);
-			path = PCCPDemoTests;
-			sourceTree = "<group>";
-		};
-		DFCBC63A1B05909100A4642E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DFCBC63B1B05909100A4642E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,39 +145,17 @@
 			productReference = DFCBC61D1B05909100A4642E /* PCCPDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DFCBC6351B05909100A4642E /* PCCPDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DFCBC6431B05909100A4642E /* Build configuration list for PBXNativeTarget "PCCPDemoTests" */;
-			buildPhases = (
-				DFCBC6321B05909100A4642E /* Sources */,
-				DFCBC6331B05909100A4642E /* Frameworks */,
-				DFCBC6341B05909100A4642E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DFCBC6381B05909100A4642E /* PBXTargetDependency */,
-			);
-			name = PCCPDemoTests;
-			productName = PCCPDemoTests;
-			productReference = DFCBC6361B05909100A4642E /* PCCPDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		DFCBC6151B05909100A4642E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Dwarven;
 				TargetAttributes = {
 					DFCBC61C1B05909100A4642E = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					DFCBC6351B05909100A4642E = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = DFCBC61C1B05909100A4642E;
 					};
 				};
 			};
@@ -235,7 +173,6 @@
 			projectRoot = "";
 			targets = (
 				DFCBC61C1B05909100A4642E /* PCCPDemo */,
-				DFCBC6351B05909100A4642E /* PCCPDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,13 +194,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFCBC6341B05909100A4642E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -278,23 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFCBC6321B05909100A4642E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFCBC63D1B05909100A4642E /* PCCPDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DFCBC6381B05909100A4642E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DFCBC61C1B05909100A4642E /* PCCPDemo */;
-			targetProxy = DFCBC6371B05909100A4642E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DFCBC62A1B05909100A4642E /* Main.storyboard */ = {
@@ -343,6 +257,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -410,6 +325,7 @@
 				INFOPLIST_FILE = PCCPDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dwarven.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -422,41 +338,8 @@
 				INFOPLIST_FILE = PCCPDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Dwarven.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		DFCBC6441B05909100A4642E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PCCPDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCCPDemo.app/PCCPDemo";
-			};
-			name = Debug;
-		};
-		DFCBC6451B05909100A4642E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PCCPDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCCPDemo.app/PCCPDemo";
 			};
 			name = Release;
 		};
@@ -477,15 +360,6 @@
 			buildConfigurations = (
 				DFCBC6411B05909100A4642E /* Debug */,
 				DFCBC6421B05909100A4642E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DFCBC6431B05909100A4642E /* Build configuration list for PBXNativeTarget "PCCPDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DFCBC6441B05909100A4642E /* Debug */,
-				DFCBC6451B05909100A4642E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
