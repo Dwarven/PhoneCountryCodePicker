@@ -1,0 +1,12 @@
+PODS:
+  - Phone-Country-Code-and-Flags (0.2.1)
+
+DEPENDENCIES:
+  - Phone-Country-Code-and-Flags
+
+SPEC CHECKSUMS:
+  Phone-Country-Code-and-Flags: 19b303483d6e14091a1e3a404ec2aac8f08a985c
+
+PODFILE CHECKSUM: 3ee83dbaa9563a8a1cbe84460b2f403e47e7db92
+
+COCOAPODS: 1.0.1

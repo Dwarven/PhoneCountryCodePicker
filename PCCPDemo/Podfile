@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+
+target 'PCCPDemo' do
+
+  pod 'Phone-Country-Code-and-Flags'
+
+end

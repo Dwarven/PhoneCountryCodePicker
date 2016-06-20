@@ -13,15 +13,12 @@
 		DFCBC62C1B05909100A4642E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCBC62A1B05909100A4642E /* Main.storyboard */; };
 		DFCBC62E1B05909100A4642E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCBC62D1B05909100A4642E /* Images.xcassets */; };
 		DFE7F1081B05A9A8009D9E71 /* PCCPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE7F0FF1B05A9A8009D9E71 /* PCCPViewController.m */; };
-		DFE7F1091B05A9A8009D9E71 /* flag_indices.json in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1011B05A9A8009D9E71 /* flag_indices.json */; };
-		DFE7F10A1B05A9A8009D9E71 /* flag_missing.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1021B05A9A8009D9E71 /* flag_missing.png */; };
-		DFE7F10B1B05A9A8009D9E71 /* flag_missing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1031B05A9A8009D9E71 /* flag_missing@2x.png */; };
-		DFE7F10C1B05A9A8009D9E71 /* flags.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1041B05A9A8009D9E71 /* flags.png */; };
-		DFE7F10D1B05A9A8009D9E71 /* flags@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1051B05A9A8009D9E71 /* flags@2x.png */; };
-		DFE7F10E1B05A9A8009D9E71 /* phone_country_code.json in Resources */ = {isa = PBXBuildFile; fileRef = DFE7F1061B05A9A8009D9E71 /* phone_country_code.json */; };
+		F8D14FD8E5C7BEB877BB1A52 /* libPods-PCCPDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5890EA7BCAE3C055B1431973 /* libPods-PCCPDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5890EA7BCAE3C055B1431973 /* libPods-PCCPDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PCCPDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FEE757891041991FD706C8 /* Pods-PCCPDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCPDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DFCBC61D1B05909100A4642E /* PCCPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCCPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCBC6211B05909100A4642E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFCBC6221B05909100A4642E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,12 +32,7 @@
 		DFE7F0F81B05A581009D9E71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		DFE7F0FE1B05A9A8009D9E71 /* PCCPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCPViewController.h; sourceTree = "<group>"; };
 		DFE7F0FF1B05A9A8009D9E71 /* PCCPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCPViewController.m; sourceTree = "<group>"; };
-		DFE7F1011B05A9A8009D9E71 /* flag_indices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flag_indices.json; sourceTree = "<group>"; };
-		DFE7F1021B05A9A8009D9E71 /* flag_missing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_missing.png; sourceTree = "<group>"; };
-		DFE7F1031B05A9A8009D9E71 /* flag_missing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flag_missing@2x.png"; sourceTree = "<group>"; };
-		DFE7F1041B05A9A8009D9E71 /* flags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flags.png; sourceTree = "<group>"; };
-		DFE7F1051B05A9A8009D9E71 /* flags@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flags@2x.png"; sourceTree = "<group>"; };
-		DFE7F1061B05A9A8009D9E71 /* phone_country_code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = phone_country_code.json; sourceTree = "<group>"; };
+		E2A06B358A820B1CD5D85D87 /* Pods-PCCPDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCPDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,18 +40,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D14FD8E5C7BEB877BB1A52 /* libPods-PCCPDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB1796ED5AE378732ECB2455 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2A06B358A820B1CD5D85D87 /* Pods-PCCPDemo.debug.xcconfig */,
+				80FEE757891041991FD706C8 /* Pods-PCCPDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DFCBC6141B05909100A4642E = {
 			isa = PBXGroup;
 			children = (
 				DFE7F0FD1B05A9A8009D9E71 /* PhoneCountryCodePicker */,
 				DFCBC61F1B05909100A4642E /* PCCPDemo */,
 				DFCBC61E1B05909100A4642E /* Products */,
+				BB1796ED5AE378732ECB2455 /* Pods */,
+				FD9C98F87A3E3A6D7F39D9AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,23 +103,17 @@
 			children = (
 				DFE7F0FE1B05A9A8009D9E71 /* PCCPViewController.h */,
 				DFE7F0FF1B05A9A8009D9E71 /* PCCPViewController.m */,
-				DFE7F1001B05A9A8009D9E71 /* Phone-Country-Code-and-Flags */,
 			);
 			name = PhoneCountryCodePicker;
 			path = ../PhoneCountryCodePicker;
 			sourceTree = "<group>";
 		};
-		DFE7F1001B05A9A8009D9E71 /* Phone-Country-Code-and-Flags */ = {
+		FD9C98F87A3E3A6D7F39D9AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DFE7F1011B05A9A8009D9E71 /* flag_indices.json */,
-				DFE7F1021B05A9A8009D9E71 /* flag_missing.png */,
-				DFE7F1031B05A9A8009D9E71 /* flag_missing@2x.png */,
-				DFE7F1041B05A9A8009D9E71 /* flags.png */,
-				DFE7F1051B05A9A8009D9E71 /* flags@2x.png */,
-				DFE7F1061B05A9A8009D9E71 /* phone_country_code.json */,
+				5890EA7BCAE3C055B1431973 /* libPods-PCCPDemo.a */,
 			);
-			path = "Phone-Country-Code-and-Flags";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCBC6401B05909100A4642E /* Build configuration list for PBXNativeTarget "PCCPDemo" */;
 			buildPhases = (
+				45B4F54883CBB8AF8FF7079A /* [CP] Check Pods Manifest.lock */,
 				DFCBC6191B05909100A4642E /* Sources */,
 				DFCBC61A1B05909100A4642E /* Frameworks */,
 				DFCBC61B1B05909100A4642E /* Resources */,
+				F5C9A9ED0B8FEF5CEFE1FFBD /* [CP] Embed Pods Frameworks */,
+				5E26DEDFEC3B4C1740FEC7D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,17 +177,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFCBC62C1B05909100A4642E /* Main.storyboard in Resources */,
-				DFE7F1091B05A9A8009D9E71 /* flag_indices.json in Resources */,
-				DFE7F10A1B05A9A8009D9E71 /* flag_missing.png in Resources */,
-				DFE7F10C1B05A9A8009D9E71 /* flags.png in Resources */,
-				DFE7F10E1B05A9A8009D9E71 /* phone_country_code.json in Resources */,
 				DFCBC62E1B05909100A4642E /* Images.xcassets in Resources */,
-				DFE7F10D1B05A9A8009D9E71 /* flags@2x.png in Resources */,
-				DFE7F10B1B05A9A8009D9E71 /* flag_missing@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45B4F54883CBB8AF8FF7079A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E26DEDFEC3B4C1740FEC7D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C9A9ED0B8FEF5CEFE1FFBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFCBC6191B05909100A4642E /* Sources */ = {
@@ -299,6 +342,7 @@
 		};
 		DFCBC6411B05909100A4642E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2A06B358A820B1CD5D85D87 /* Pods-PCCPDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -312,6 +356,7 @@
 		};
 		DFCBC6421B05909100A4642E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80FEE757891041991FD706C8 /* Pods-PCCPDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

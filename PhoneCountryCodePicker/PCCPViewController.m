@@ -27,6 +27,10 @@
     return self;
 }
 
++ (NSBundle *)resourceBundle{
+    return [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Phone-Country-Code-and-Flags" ofType:@"bundle"]];
+}
+
 - (void)dealloc{
     _PCCs = nil;
     _keys = nil;
@@ -47,7 +51,7 @@
     [aiview startAnimating];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
+        NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"phone_country_code" ofType:@"json"]
                                                                                                    encoding:NSUTF8StringEncoding
                                                                                                       error:NULL]
                                                                    dataUsingEncoding:NSUTF8StringEncoding]
@@ -201,7 +205,7 @@
 }
 
 + (UIImage *)imageForCountryCode:(NSString *)code{
-    NSNumber * y = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"flag_indices" ofType:@"json"]
+    NSNumber * y = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"flag_indices" ofType:@"json"]
                                                                                             encoding:NSUTF8StringEncoding
                                                                                                error:NULL]
                                                             dataUsingEncoding:NSUTF8StringEncoding]
@@ -210,7 +214,7 @@
     if (!y) {
         y = @0;
     }
-    CGImageRef cgImage = CGImageCreateWithImageInRect([[UIImage imageNamed:@"flags"] CGImage], CGRectMake(0, y.integerValue * 2, 32, 32));
+    CGImageRef cgImage = CGImageCreateWithImageInRect([[UIImage imageWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"flags" ofType:@"png"]] CGImage], CGRectMake(0, y.integerValue * 2, 32, 32));
     UIImage * result = [UIImage imageWithCGImage:cgImage scale:2.0 orientation:UIImageOrientationUp];
     CGImageRelease(cgImage);
     return result;
@@ -218,7 +222,7 @@
 
 + (id)infoFromSimCardAndiOSSettings{
     
-    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
+    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"phone_country_code" ofType:@"json"]
                                                                                                encoding:NSUTF8StringEncoding
                                                                                                   error:NULL]
                                                                dataUsingEncoding:NSUTF8StringEncoding]
@@ -250,7 +254,7 @@
 
 
 + (id)infoForPhoneCode:(NSInteger)phoneCode{
-    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"phone_country_code" ofType:@"json"]
+    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"phone_country_code" ofType:@"json"]
                                                                                                encoding:NSUTF8StringEncoding
                                                                                                   error:NULL]
                                                                dataUsingEncoding:NSUTF8StringEncoding]
