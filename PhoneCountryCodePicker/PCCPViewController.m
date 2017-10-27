@@ -31,6 +31,25 @@
     return [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Phone-Country-Code-and-Flags" ofType:@"bundle"]];
 }
 
++ (NSData *)jsonDataForPath:(NSString *)path {
+    return [[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:path ofType:@"json"]
+                                            encoding:NSUTF8StringEncoding
+                                               error:NULL]
+            dataUsingEncoding:NSUTF8StringEncoding];
+}
+
++ (NSArray *)countryInfos {
+    return [NSJSONSerialization JSONObjectWithData:[PCCPViewController jsonDataForPath:@"phone_country_code"]
+                                           options:kNilOptions
+                                             error:nil];
+}
+
++ (NSDictionary *)flagIndices {
+    return [NSJSONSerialization JSONObjectWithData:[PCCPViewController jsonDataForPath:@"flag_indices"]
+                                           options:kNilOptions
+                                             error:nil];
+}
+
 - (void)dealloc{
     _PCCs = nil;
     _keys = nil;
@@ -51,12 +70,7 @@
     [aiview startAnimating];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"phone_country_code" ofType:@"json"]
-                                                                                                   encoding:NSUTF8StringEncoding
-                                                                                                      error:NULL]
-                                                                   dataUsingEncoding:NSUTF8StringEncoding]
-                                                          options:kNilOptions
-                                                            error:nil];
+        NSArray * array = [PCCPViewController countryInfos];
         
         if (_isUsingChinese) {
             _PCCs = [self chineseSortWithDictionaryArray:array];
@@ -170,8 +184,7 @@
     return [super tableView:tableView numberOfRowsInSection:section];
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [_keys objectAtIndex:section];
 }
 
@@ -194,23 +207,19 @@
     return cell;;
 }
 
--(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     return _keys;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    _completion([_PCCs valueForKey:[_keys objectAtIndex:[indexPath section]]][indexPath.row]);
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (_completion) {
+        _completion([_PCCs valueForKey:[_keys objectAtIndex:[indexPath section]]][indexPath.row]);
+    }
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 + (UIImage *)imageForCountryCode:(NSString *)code{
-    NSNumber * y = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"flag_indices" ofType:@"json"]
-                                                                                            encoding:NSUTF8StringEncoding
-                                                                                               error:NULL]
-                                                            dataUsingEncoding:NSUTF8StringEncoding]
-                                                   options:kNilOptions
-                                                     error:nil][code];
+    NSNumber * y = [PCCPViewController flagIndices][code];
     if (!y) {
         y = @0;
     }
@@ -222,12 +231,7 @@
 
 + (id)infoFromSimCardAndiOSSettings{
     
-    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"phone_country_code" ofType:@"json"]
-                                                                                               encoding:NSUTF8StringEncoding
-                                                                                                  error:NULL]
-                                                               dataUsingEncoding:NSUTF8StringEncoding]
-                                                      options:kNilOptions
-                                                        error:nil];
+    NSArray * array = [PCCPViewController countryInfos];
     
     NSString * carrierIsoCountryCode = [[[[[CTTelephonyNetworkInfo alloc] init] subscriberCellularProvider] isoCountryCode] uppercaseString];
     
@@ -254,12 +258,7 @@
 
 
 + (id)infoForPhoneCode:(NSInteger)phoneCode{
-    NSArray * array = [NSJSONSerialization JSONObjectWithData:[[[NSString alloc] initWithContentsOfFile:[[PCCPViewController resourceBundle] pathForResource:@"phone_country_code" ofType:@"json"]
-                                                                                               encoding:NSUTF8StringEncoding
-                                                                                                  error:NULL]
-                                                               dataUsingEncoding:NSUTF8StringEncoding]
-                                                      options:kNilOptions
-                                                        error:nil];
+    NSArray * array = [PCCPViewController countryInfos];
     
     id result = nil;
     for (NSDictionary * dic in array) {
