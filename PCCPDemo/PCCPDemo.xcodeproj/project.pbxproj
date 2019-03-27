@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		537835EF224B871C00738D01 /* PCCPDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 537835EE224B871C00738D01 /* PCCPDemoTests.m */; };
 		DFCBC6231B05909100A4642E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCBC6221B05909100A4642E /* main.m */; };
 		DFCBC6261B05909100A4642E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCBC6251B05909100A4642E /* AppDelegate.m */; };
 		DFCBC6291B05909100A4642E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCBC6281B05909100A4642E /* ViewController.m */; };
@@ -16,7 +17,20 @@
 		F8D14FD8E5C7BEB877BB1A52 /* libPods-PCCPDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5890EA7BCAE3C055B1431973 /* libPods-PCCPDemo.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		537835F1224B871C00738D01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFCBC6151B05909100A4642E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFCBC61C1B05909100A4642E;
+			remoteInfo = PCCPDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		537835EC224B871C00738D01 /* PCCPDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCCPDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		537835EE224B871C00738D01 /* PCCPDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCCPDemoTests.m; sourceTree = "<group>"; };
+		537835F0224B871C00738D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5890EA7BCAE3C055B1431973 /* libPods-PCCPDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PCCPDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80FEE757891041991FD706C8 /* Pods-PCCPDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCPDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DFCBC61D1B05909100A4642E /* PCCPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCCPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		537835E9224B871C00738D01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFCBC61A1B05909100A4642E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		537835ED224B871C00738D01 /* PCCPDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				537835EE224B871C00738D01 /* PCCPDemoTests.m */,
+				537835F0224B871C00738D01 /* Info.plist */,
+			);
+			path = PCCPDemoTests;
+			sourceTree = "<group>";
+		};
 		BB1796ED5AE378732ECB2455 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +91,7 @@
 			children = (
 				DFE7F0FD1B05A9A8009D9E71 /* PhoneCountryCodePicker */,
 				DFCBC61F1B05909100A4642E /* PCCPDemo */,
+				537835ED224B871C00738D01 /* PCCPDemoTests */,
 				DFCBC61E1B05909100A4642E /* Products */,
 				BB1796ED5AE378732ECB2455 /* Pods */,
 				FD9C98F87A3E3A6D7F39D9AE /* Frameworks */,
@@ -71,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCBC61D1B05909100A4642E /* PCCPDemo.app */,
+				537835EC224B871C00738D01 /* PCCPDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +151,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		537835EB224B871C00738D01 /* PCCPDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 537835F5224B871C00738D01 /* Build configuration list for PBXNativeTarget "PCCPDemoTests" */;
+			buildPhases = (
+				537835E8224B871C00738D01 /* Sources */,
+				537835E9224B871C00738D01 /* Frameworks */,
+				537835EA224B871C00738D01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				537835F2224B871C00738D01 /* PBXTargetDependency */,
+			);
+			name = PCCPDemoTests;
+			productName = PCCPDemoTests;
+			productReference = 537835EC224B871C00738D01 /* PCCPDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DFCBC61C1B05909100A4642E /* PCCPDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCBC6401B05909100A4642E /* Build configuration list for PBXNativeTarget "PCCPDemo" */;
@@ -148,6 +198,11 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Dwarven;
 				TargetAttributes = {
+					537835EB224B871C00738D01 = {
+						CreatedOnToolsVersion = 10.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DFCBC61C1B05909100A4642E;
+					};
 					DFCBC61C1B05909100A4642E = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -158,8 +213,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = DFCBC6141B05909100A4642E;
 			productRefGroup = DFCBC61E1B05909100A4642E /* Products */;
@@ -167,11 +224,19 @@
 			projectRoot = "";
 			targets = (
 				DFCBC61C1B05909100A4642E /* PCCPDemo */,
+				537835EB224B871C00738D01 /* PCCPDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		537835EA224B871C00738D01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFCBC61B1B05909100A4642E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,13 +255,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PCCPDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5E26DEDFEC3B4C1740FEC7D0 /* [CP] Copy Pods Resources */ = {
@@ -205,9 +273,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PCCPDemo/Pods-PCCPDemo-resources.sh",
+				"${PODS_ROOT}/Phone-Country-Code-and-Flags/Phone-Country-Code-and-Flags.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Phone-Country-Code-and-Flags.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -232,6 +303,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		537835E8224B871C00738D01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537835EF224B871C00738D01 /* PCCPDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFCBC6191B05909100A4642E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +323,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		537835F2224B871C00738D01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFCBC61C1B05909100A4642E /* PCCPDemo */;
+			targetProxy = 537835F1224B871C00738D01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DFCBC62A1B05909100A4642E /* Main.storyboard */ = {
@@ -259,6 +346,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		537835F3224B871C00738D01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PCCPDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dwarven.PCCPDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCCPDemo.app/PCCPDemo";
+			};
+			name = Debug;
+		};
+		537835F4224B871C00738D01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PCCPDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dwarven.PCCPDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCCPDemo.app/PCCPDemo";
+			};
+			name = Release;
+		};
 		DFCBC63E1B05909100A4642E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -296,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -347,7 +502,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PCCPDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dwarven.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,7 +515,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PCCPDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Dwarven.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +524,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		537835F5224B871C00738D01 /* Build configuration list for PBXNativeTarget "PCCPDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				537835F3224B871C00738D01 /* Debug */,
+				537835F4224B871C00738D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DFCBC6181B05909100A4642E /* Build configuration list for PBXProject "PCCPDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
