@@ -1,1 +1,7 @@
 language: objective-c
+before_install:
+  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+  - pod install --repo-update --project-directory=PCCPDemo
+xcode_workspace: PCCPDemo/PCCPDemo.xcworkspace
+xcode_scheme: PCCPDemo
+xcode_destination: platform=iOS Simulator,name=iPhone X
